@@ -4216,14 +4216,14 @@ em.state-invalid {
 }
 
 .btn.btn-primary {
-	background: #5645ff;
-	border-color: #5645ff;
+	background: #ED0000;
+	border-color: #ED0000;
 	color: #fff;
 }
 
 .btn.btn-primary:hover {
-	background: #2812ff;
-	border-color: #2812ff;
+	background: #B70000;
+	border-color: #B70000;
 }
 
 .btn.btn-secondary {
@@ -4258,14 +4258,15 @@ em.state-invalid {
 }
 
 .btn.btn-black {
-	background: #000;
-	border: .1429rem solid #000;
+	background: #ED0000;
+	border: .1429rem solid #ED0000;
 	color: #fff;
 }
 
 .btn.btn-black:hover {
-	background: none;
-	color: #000;
+	background: #B70000;
+	border: .1429rem solid #B70000;
+	color: #fff;
 }
 
 .btn:focus {
@@ -4300,12 +4301,12 @@ em.state-invalid {
 }
 
 .btn.btn-trans-primary {
-	border: .1429rem solid #5645ff;
+	border: .1429rem solid #ED0000;
 	color: #55565b;
 }
 
 .btn.btn-trans-primary:hover {
-	background: #5645ff;
+	background: #ED0000;
 	color: #fff;
 }
 
@@ -6759,7 +6760,8 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder {
 .social-network li {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
 	margin: 0 0 .5rem;
 }
 
@@ -6777,6 +6779,12 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder {
 }
 
 .social-network a span {
+	-webkit-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.social-network a i {
 	-webkit-transition: all .3s linear;
 	-o-transition: all .3s linear;
 	transition: all .3s linear;
@@ -6800,6 +6808,18 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder {
 
 .social-network a:hover .icon-dribbble {
 	color: #c32361;
+}
+
+.social-network a:hover .fa-instagram {
+	color: #CC2EFA;
+}
+
+.social-network a:hover .fa-square-facebook {
+	color: #0040FF;
+}
+
+.social-network a:hover .fa-youtube {
+	color: #FF0000;
 }
 
 .social-network.social-small {
@@ -6832,7 +6852,7 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder {
 }
 
 .social-network.with-text li {
-	padding: 0 .3rem 0 0;
+	/*padding: 0 .3rem 0 0;*/
 	font-size: .875rem;
 	line-height: 1.2;
 }
@@ -7218,7 +7238,7 @@ a.full-width-icon:hover .social-text {
 }
 
 .contact-list a:hover {
-	color: #5645ff;
+	color: #DB0000;
 }
 
 .contact-list li {
@@ -12219,11 +12239,26 @@ a.full-width-icon:hover .social-text {
 	}
 }
 
+/* Portfolio video 상세페이지 사용자 정의 */
+@media only screen and (max-width: 768px) {
+	.video-text {
+		padding-top: 50px;
+	}
+}
+
 /* 한류 이미지 관련 패딩 사용자 정의 */
 @media only screen and (min-width: 1800px) {
 	.content-block {
 		padding-top: 15rem;
 		padding-bottom: 10rem;
+	}
+
+	.contact-block {
+		padding-top: 10rem;
+	}
+
+	.portfolio-block {
+		padding-top: 10rem;
 	}
 }
 
@@ -12238,6 +12273,24 @@ a.full-width-icon:hover .social-text {
 	.content-block {
 		padding-top: 13rem;
 		padding-bottom: 15rem;
+	}
+}
+
+@media only screen and (min-width: 300px) {
+	.success-block {
+		padding-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 465px) {
+	.success-block {
+		padding-top: 20%;
+	}
+}
+
+@media only screen and (max-width: 984px) {
+	.success-block {
+		padding-top: 12%;
 	}
 }
 
@@ -12323,8 +12376,15 @@ a.full-width-icon:hover .social-text {
 }
 
 .recruit-title {
+	margin-top: 5%;
 	font-weight: bold;
 	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+	.recruit-title {
+		font-size: 1rem;
+	}
 }
 
 @media only screen and (min-width: 701px) {
